@@ -5,6 +5,7 @@
 		$scope.data = ['A', 'l', 'a', 'n', ' ', 'M', 'a', '.'];
 		$scope.transform_value = "translateX(0)";
 		$scope.show_intro = true;
+		$scope.color_value = '#000';
 		setTimeout(function() {
 			(function doTimeout (i) {
 				setTimeout(function () {
@@ -13,16 +14,24 @@
 						$scope.$apply();
 						doTimeout(i);
 					}
-				}, 100);
+				}, 90);
 			})($scope.data.length);
 		}, 2000);
 		setTimeout(function() {
-			$scope.transform_value = "translateX(-120%)";
+			$scope.color_value = '#555';
 			$scope.$apply();
 			setTimeout(function() {
-				$scope.show_intro = false;
+				$scope.color_value = '#000';
 				$scope.$apply();
-			}, 400);
+				setTimeout(function() {
+					$scope.transform_value = "translateX(-120%)";
+					$scope.$apply();
+					setTimeout(function() {
+						$scope.show_intro = false;
+						$scope.$apply();
+					}, 400);
+				}, 300);
+			}, 250);
 		}, 3400);
 	});
 })();
