@@ -1,6 +1,26 @@
 body {
 	margin: 0;
 }
+#loading {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	transition: transform 800ms ease;
+}
+#loading .wrapper {
+	font-family: "Montserrat";
+	font-weight: normal;
+	font-size: 2.5rem;
+}
+#loading .wrapper h1 {
+	margin: 0;
+	border-right: 4px solid black;
+	padding-right: 6px;
+}
+#loading .wrapper h1 span.hidden {
+	color: transparent;
+}
 #resume {
 	height: 100%;
 	width: 100%;

@@ -2,12 +2,20 @@
 <meta name="viewport" content="width=device-width"/>
 <meta name="description" content="Alan Ma's Portfolio">
 <meta name="author" content="Alan Ma">
-<script src="jquery-3.1.1.min.js"></script>
-<script src="script.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i" rel="stylesheet">
+<script src="angular.min.js"></script>
+<script src="app.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
 <link rel="stylesheet" href="main.css">
 <title>Alan Ma</title>
 
-<div class="container">
-	<iframe id="resume" src="https://docs.google.com/gview?url=https://alan-ma.github.io/Alan%20Ma%20Resume.pdf&embedded=true" frameborder="0"></iframe>
-</div>
+<body ng-app="portfolio" ng-controller="LoadingController as loading">
+	<div id="loading" ng-style="{transform: transform_value, opacity: opacity_value}" ng-show="show_intro">
+		<div class="wrapper"><h1>
+			<span class="hidden">!</span>
+			<span>{{name}}<span>
+		</h1></div>
+	</div>
+	<div id="container" ng-show="show_resume">
+		<iframe id="resume" src="https://docs.google.com/gview?url=https://alan-ma.github.io/Alan%20Ma%20Resume.pdf&embedded=true" frameborder="0"></iframe>
+	</div>
+</body>
