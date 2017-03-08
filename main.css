@@ -7,6 +7,9 @@ body {
 	justify-content: center;
 	height: 100%;
 	transition: transform 800ms ease;
+	position: absolute;
+	background: white;
+	width: 100%;
 }
 #loading .wrapper {
 	font-family: "Montserrat";
@@ -22,6 +25,6 @@ body {
 	color: transparent;
 }
 #resume {
-	height: 100%;
 	width: 100%;
+	height: 100%;
 }

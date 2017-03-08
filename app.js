@@ -5,7 +5,6 @@
 		$scope.data = ['A', 'l', 'a', 'n', ' ', 'M', 'a', '.'];
 		$scope.transform_value = "translateX(0)";
 		$scope.show_intro = true;
-		$scope.opacity_value = 1;
 		(function doTimeout (i) {
 			setTimeout(function () {
 				if (i--) {
@@ -21,10 +20,6 @@
 			setTimeout(function() {
 				$scope.show_intro = false;
 				$scope.$apply();
-				setTimeout(function() {
-					$scope.show_resume = true;
-					$scope.$apply();
-				}, 50);
 			}, 400);
 		}, 1400);
 	});
