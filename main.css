@@ -36,7 +36,7 @@ h1 {
 	-webkit-clip-path: inset(70% 0 0 0);
 }
 .panel {
-	width: 17%;
+	width: 15%;
 	height: 0;
 	float: left;
 	display: flex;
@@ -68,7 +68,7 @@ h1 {
 	margin-bottom: -21px;
 }
 .panel.filler {
-	width: 16%;
+	width: 20%;
 }
 .panel h1 {
 	font-size: 5rem;
