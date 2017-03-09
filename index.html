@@ -10,10 +10,13 @@
 
 <body ng-app="portfolio" ng-controller="LoadingController as loading">
 	<div id="loading" ng-style="{transform: transform_value, opacity: opacity_value}" ng-show="show_intro">
-		<div class="wrapper" ng-style="{transform: scale_value}"><h1>
-			<span class="hidden">!</span>
-			<span>{{name}}<span>
-		</h1></div>
+		<div class="wrapper">
+			<img src="images/search.png" alt="">
+			<h1 ng-style="{transform: scale_value}">
+				<span class="hidden">.</span>
+				<span>{{name}}<span>
+			</h1>
+		</div>
 	</div>
 	<div id="container">
 		<iframe id="resume" src="https://docs.google.com/gview?url=https://alan-ma.github.io/Alan%20Ma%20Resume.pdf&embedded=true" frameborder="0"></iframe>
