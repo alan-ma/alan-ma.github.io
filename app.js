@@ -5,7 +5,7 @@
 		$scope.data = ['A', 'l', 'a', 'n', ' ', 'M', 'a', '.'];
 		$scope.transform_value = "translateX(0)";
 		$scope.show_intro = true;
-		$scope.color_value = '#000';
+		$scope.scale_value = 'scale(1)';
 		setTimeout(function() {
 			(function doTimeout (i) {
 				setTimeout(function () {
@@ -18,10 +18,10 @@
 			})($scope.data.length);
 		}, 2000);
 		setTimeout(function() {
-			$scope.color_value = '#555';
+			$scope.scale_value = 'scale(0.9)';
 			$scope.$apply();
 			setTimeout(function() {
-				$scope.color_value = '#000';
+				$scope.scale_value = 'scale(1)';
 				$scope.$apply();
 				setTimeout(function() {
 					$scope.transform_value = "translateX(-120%)";

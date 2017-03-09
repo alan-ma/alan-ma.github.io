@@ -10,9 +10,9 @@
 
 <body ng-app="portfolio" ng-controller="LoadingController as loading">
 	<div id="loading" ng-style="{transform: transform_value, opacity: opacity_value}" ng-show="show_intro">
-		<div class="wrapper"><h1>
+		<div class="wrapper" ng-style="{transform: scale_value}"><h1>
 			<span class="hidden">!</span>
-			<span ng-style="{color: color_value}">{{name}}<span>
+			<span>{{name}}<span>
 		</h1></div>
 	</div>
 	<div id="container">
