@@ -44,3 +44,12 @@ body {
 	50% {border-right: 4px solid transparent;}
 	100% {border-right: 4px solid black;}
 }
+
+@media screen only and (max-width: 720px) {
+	#loading .wrapper {
+		font-size: 1rem;
+	}
+	#loading img {
+		height: 2rem;
+	}
+}
