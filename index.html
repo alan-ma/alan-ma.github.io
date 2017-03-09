@@ -11,11 +11,10 @@
 <body ng-app="portfolio" ng-controller="LoadingController as loading">
 	<div id="loading" ng-style="{transform: transform_value, opacity: opacity_value}" ng-show="show_intro">
 		<div class="wrapper">
-			<img src="images/search.png" alt="">
-			<h1 ng-style="{transform: scale_value}">
-				<span class="hidden">.</span>
+			<h1>
 				<span>{{name}}<span>
 			</h1>
+			<div ng-style="{transform: scale_value}" class="image_wrapper"><img src="images/search.png" alt=""></div>
 		</div>
 	</div>
 	<div id="container">

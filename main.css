@@ -8,7 +8,7 @@ body {
 	height: 100%;
 	transition: transform 1s ease;
 	position: absolute;
-	background: white;
+	background: #FFF;
 	width: 100%;
 }
 #loading .wrapper {
@@ -18,14 +18,21 @@ body {
 	display: flex;
 	align-items: center;
 	width: 720px;
-	border-bottom: 5px solid #333;
+	justify-content: space-between;
+	padding: 7px;
+	box-shadow: 0 3px 5px rgba(0,0,0,0.15), 0 3px 5px rgba(0,0,0,0.20);
+	border-radius: 3px;
 }
 #loading .wrapper h1 {
 	margin: 0;
 	padding-right: 6px;
 	animation: blink 1000ms step-start infinite;
-	border-right: 4px solid black;
+	border-right: 4px solid #000;
 	font-weight: normal;
+}
+#loading .wrapper h1::before {
+	content: "'";
+	color: transparent;
 }
 #loading .wrapper h1 span.hidden {
 	color: transparent;
@@ -35,14 +42,19 @@ body {
 	height: 4rem;
 	width: auto;
 }
+#loading .image_wrapper {
+	background: #555;
+	padding: 5px;
+	border-radius: 3px;
+}
 #resume {
 	width: 100%;
 	height: 100%;
 }
 @keyframes blink {
-	0% {border-right: 4px solid black;}
+	0% {border-right: 4px solid #000;}
 	50% {border-right: 4px solid transparent;}
-	100% {border-right: 4px solid black;}
+	100% {border-right: 4px solid #000;}
 }
 
 @media screen and (max-width: 720px) {
@@ -54,5 +66,13 @@ body {
 	}
 	#loading .wrapper {
 		width: 300px;
+	}
+	#loading .wrapper h1 {
+		border-right: 2px solid #000;
+	}
+	@keyframes blink {
+		0% {border-right: 2px solid #000;}
+		50% {border-right: 2px solid transparent;}
+		100% {border-right: 2px solid #000;}
 	}
 }

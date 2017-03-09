@@ -2,7 +2,7 @@
 	var app = angular.module('portfolio', []);
 	app.controller('LoadingController', function($scope) {
 		$scope.name = "";
-		$scope.data = ['A', 'l', 'a', 'n', ' ', 'M', 'a', '.'];
+		$scope.data = ['A', 'l', 'a', 'n', ' ', 'M', 'a'];
 		$scope.transform_value = "translateX(0)";
 		$scope.show_intro = true;
 		$scope.scale_value = 'scale(1)';
@@ -18,7 +18,7 @@
 			})($scope.data.length);
 		}, 2000);
 		setTimeout(function() {
-			$scope.scale_value = 'scale(0.9)';
+			$scope.scale_value = 'scale(0.85)';
 			$scope.$apply();
 			setTimeout(function() {
 				$scope.scale_value = 'scale(1)';
