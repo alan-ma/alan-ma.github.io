@@ -34,9 +34,10 @@
 			}, 250);
 		}, 2500);
 	}]);
-	app.controller('HeadingController', ['$scope', function($scope) {
+	app.controller('PortfolioController', ['$scope', function($scope) {
 		$scope.profile_open = false;
 		$scope.rotate_value = "0deg";
+		$scope.clicks = 0;
 		$scope.mouse_enter = function() {
 			if (!$scope.profile_open) {
 				$scope.rotate_value = '30deg';
@@ -47,13 +48,29 @@
 				$scope.rotate_value = '0deg';
 			}
 		};
-		$scope.open_profile = function() {
+		$scope.toggle_profile = function() {
 			$scope.profile_open = !$scope.profile_open;
 			if ($scope.profile_open) {
-				$scope.rotate_value = "-270deg";
+				$scope.open_profile();
 			} else {
-				$scope.rotate_value = '0deg';
-			}	
+				$scope.close_profile();
+			}
+		}
+		$scope.open_profile = function() {
+			$scope.profile_open = true;
+			$scope.rotate_value = "-270deg";
+			$scope.clicks = -1;
+		}
+		$scope.close_profile = function() {
+			$scope.profile_open = false;
+			$scope.rotate_value = '0deg';
+		};
+		$scope.check_profile = function() {
+			$scope.clicks ++;
+			console.log($scope.clicks);
+			if ($scope.clicks) {
+				$scope.close_profile();
+			}
 		};
 	}]);
 })();

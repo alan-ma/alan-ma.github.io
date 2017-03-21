@@ -18,9 +18,9 @@
 			<div ng-style="{transform: scale_value}" class="image_wrapper"><img src="images/search.png" alt=""></div>
 		</div>
 	</div>
-	<div id="container">
+	<div id="container" ng-controller="PortfolioController" ng-click="check_profile()">
 		<!-- <iframe id="resume" src="https://docs.google.com/gview?url=https://alan-ma.github.io/Alan%20Ma%20Resume.pdf&embedded=true" frameborder="0"></iframe> -->
-		<header ng-controller="HeadingController">
+		<header>
 			<div class="wrapper"><h1>Alan Ma</h1></div>
 			<form novalidate>
 				<input id="searchbar" type="text" ng-model="search_value" placeholder="Search for projects...">
@@ -32,7 +32,7 @@
 			</form>
 			<div id="profile">
 				<img src="me.jpg" alt="Alan Ma">
-				<div id="profile_wrapper" ng-click="open_profile()" ng-mouseover="mouse_enter()" ng-mouseleave="mouse_leave()" style="transform: rotate({{rotate_value}})"></div>
+				<div id="profile_wrapper" ng-click="toggle_profile()" ng-mouseover="mouse_enter()" ng-mouseleave="mouse_leave()" style="transform: rotate({{rotate_value}})"></div>
 				<div id="information" ng-show="profile_open">hello there</div>
 			</div>
 		</header>

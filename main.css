@@ -70,6 +70,9 @@ h1, h2, h3, h4, h5, h6 {
 	50% {border-right: 4px solid transparent;}
 	100% {border-right: 4px solid #000;}
 }
+#container {
+	height: 100%;
+}
 #container header {
 	height: 150px;
 	width: 100%;
