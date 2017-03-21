@@ -10,7 +10,7 @@
 <title>Alan Ma</title>
 
 <body ng-app="portfolio">
-	<div id="loading" ng-style="{transform: transform_value, opacity: opacity_value}" ng-show="false" ng-controller="LoadingController as loading">
+	<div id="loading" ng-style="{transform: transform_value, opacity: opacity_value}" ng-show="show_intro" ng-controller="LoadingController as loading">
 		<div class="wrapper">
 			<h1>
 				<span>{{name}}</span>
@@ -35,5 +35,6 @@
 				<label ng-repeat="tab in tabs track by $index" ng-class="{selected: $index==search.tab}"><input type="radio" ng-value="tab.value" ng-model="$parent.search.tab">{{tab.name}}</label>
 			</form>
 		</header>
+		<div id="main">{{search}}</div>
 	</div>
 </body>
