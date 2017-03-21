@@ -101,6 +101,9 @@ header .image_wrapper {
 	height: 2.2rem;
 	box-sizing: border-box;
 }
+header .image_wrapper:hover {
+	cursor: pointer;
+}
 header #searchbar {
 	border: none;	
 	font-size: 1.1rem;
@@ -110,7 +113,7 @@ header #searchbar {
 	font-family: 'Open Sans';
 	width: 100%;
 }
-header #searchbar:hover {
+header #search:hover {
 	box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.08);
 }
 header .wrapper {
@@ -120,6 +123,11 @@ header .wrapper {
 }
 header .wrapper h1 {
 	margin: 0;
+	transition: color 0.25s ease;
+}
+header .wrapper h1:hover {
+	cursor: pointer;
+	color: #888;
 }
 header #profile {
 	height: 6rem;

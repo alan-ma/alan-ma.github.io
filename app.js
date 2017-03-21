@@ -86,6 +86,11 @@
 				'value': 2
 			}
 		];
+
+		$scope.search = {
+			"query": "",
+			"tab": 0
+		};
 	}]);
 })();
 
