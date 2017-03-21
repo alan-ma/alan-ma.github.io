@@ -80,8 +80,9 @@ h1, h2, h3, h4, h5, h6 {
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
 	display: flex;
 	padding: 30px 20px 0 20px;
+	position: relative;
 }
-header form {
+header #search {
 	display: flex;
 	height: 2.2rem;
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
@@ -109,7 +110,7 @@ header #searchbar {
 	font-family: 'Open Sans';
 	width: 100%;
 }
-header form:hover {
+header #searchbar:hover {
 	box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.08);
 }
 header .wrapper {
@@ -181,6 +182,42 @@ header #profile #information.ng-hide {
 header #profile #information.ng-hide-add, #information.ng-hide-remove {
 	transition: all 0.3s ease;
 }
+header #tab_selection {
+	position: absolute;
+	top: 100px;
+	left: 180px;
+	height: 50px;
+	display: flex;
+}
+header #tab_selection label {
+	width: 120px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	padding: 5px;
+	position: relative;
+}
+header #tab_selection label::after {
+	content: "";
+	height: 5px;
+	position: absolute;
+	width: 100%;
+	background: #555;
+	bottom: 0;
+	left: 0;
+	transform: scaleX(0);
+	transition: transform 0.2s ease;
+}
+header #tab_selection label:hover {
+	cursor: pointer;
+}
+header #tab_selection label:hover::after {
+	transform: scaleX(1);
+}
+header #tab_selection label.selected::after {
+	transform: scaleX(1);
+}
+
 
 @media screen and (max-width: 720px) {
 	#loading .wrapper {

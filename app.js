@@ -67,11 +67,25 @@
 		};
 		$scope.check_profile = function() {
 			$scope.clicks ++;
-			console.log($scope.clicks);
 			if ($scope.clicks) {
 				$scope.close_profile();
 			}
 		};
+
+		$scope.tabs = [
+			{
+				'name': 'About',
+				'value': 0
+			},
+			{
+				'name': 'Work',
+				'value': 1
+			},
+			{
+				'name': 'Fun',
+				'value': 2
+			}
+		];
 	}]);
 })();
 

@@ -22,19 +22,18 @@
 		<!-- <iframe id="resume" src="https://docs.google.com/gview?url=https://alan-ma.github.io/Alan%20Ma%20Resume.pdf&embedded=true" frameborder="0"></iframe> -->
 		<header>
 			<div class="wrapper"><h1>Alan Ma</h1></div>
-			<form novalidate>
-				<input id="searchbar" type="text" ng-model="search_value" placeholder="Search for projects...">
+			<form id="search" novalidate>
+				<input id="searchbar" type="text" ng-model="search.query" placeholder="Search for projects...">
 				<div class="image_wrapper"><img src="images/search.png" alt=""></div>
-
-				<!-- <label><input type="radio" ng-model="user.preference" value="vi" />vi</label> -->
-   				<!-- <label><input type="radio" ng-model="user.preference" value="emacs" />emacs</label><br /> -->
-
 			</form>
 			<div id="profile">
 				<img src="me.jpg" alt="Alan Ma">
 				<div id="profile_wrapper" ng-click="toggle_profile()" ng-mouseover="mouse_enter()" ng-mouseleave="mouse_leave()" style="transform: rotate({{rotate_value}})"></div>
 				<div id="information" ng-show="profile_open">hello there</div>
 			</div>
+			<form id="tab_selection">
+				<label ng-repeat="tab in tabs track by $index" ng-class="{selected: $index==search.tab}"><input type="radio" ng-value="tab.value" ng-model="$parent.search.tab">{{tab.name}}</label>
+			</form>
 		</header>
 	</div>
 </body>
