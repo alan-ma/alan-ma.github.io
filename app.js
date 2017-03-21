@@ -1,6 +1,6 @@
 (function() {
-	var app = angular.module('portfolio', []);
-	app.controller('LoadingController', function($scope) {
+	var app = angular.module('portfolio', ['ngAnimate']);
+	app.controller('LoadingController', ['$scope', function($scope) {
 		$scope.name = "";
 		$scope.data = ['A', 'l', 'a', 'n', ' ', 'M', 'a'];
 		$scope.transform_value = "translateX(0)";
@@ -16,7 +16,7 @@
 					}
 				}, 90);
 			})($scope.data.length);
-		}, 2000);
+		}, 1500);
 		setTimeout(function() {
 			$scope.scale_value = 'scale(0.85)';
 			$scope.$apply();
@@ -32,8 +32,30 @@
 					}, 400);
 				}, 300);
 			}, 250);
-		}, 3400);
-	});
+		}, 2500);
+	}]);
+	app.controller('HeadingController', ['$scope', function($scope) {
+		$scope.profile_open = false;
+		$scope.rotate_value = "0deg";
+		$scope.mouse_enter = function() {
+			if (!$scope.profile_open) {
+				$scope.rotate_value = '30deg';
+			}
+		};
+		$scope.mouse_leave = function() {
+			if (!$scope.profile_open) {
+				$scope.rotate_value = '0deg';
+			}
+		};
+		$scope.open_profile = function() {
+			$scope.profile_open = !$scope.profile_open;
+			if ($scope.profile_open) {
+				$scope.rotate_value = "-270deg";
+			} else {
+				$scope.rotate_value = '0deg';
+			}	
+		};
+	}]);
 })();
 
 

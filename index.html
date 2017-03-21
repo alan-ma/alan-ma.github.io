@@ -3,21 +3,38 @@
 <meta name="description" content="Alan Ma's Portfolio">
 <meta name="author" content="Alan Ma">
 <script src="angular.min.js"></script>
+<script src="angular-animate.min.js"></script>
 <script src="app.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
 <link rel="stylesheet" href="main.css">
 <title>Alan Ma</title>
 
-<body ng-app="portfolio" ng-controller="LoadingController as loading">
-	<div id="loading" ng-style="{transform: transform_value, opacity: opacity_value}" ng-show="show_intro">
+<body ng-app="portfolio">
+	<div id="loading" ng-style="{transform: transform_value, opacity: opacity_value}" ng-show="false" ng-controller="LoadingController as loading">
 		<div class="wrapper">
 			<h1>
-				<span>{{name}}<span>
+				<span>{{name}}</span>
 			</h1>
 			<div ng-style="{transform: scale_value}" class="image_wrapper"><img src="images/search.png" alt=""></div>
 		</div>
 	</div>
 	<div id="container">
-		<iframe id="resume" src="https://docs.google.com/gview?url=https://alan-ma.github.io/Alan%20Ma%20Resume.pdf&embedded=true" frameborder="0"></iframe>
+		<!-- <iframe id="resume" src="https://docs.google.com/gview?url=https://alan-ma.github.io/Alan%20Ma%20Resume.pdf&embedded=true" frameborder="0"></iframe> -->
+		<header ng-controller="HeadingController">
+			<div class="wrapper"><h1>Alan Ma</h1></div>
+			<form novalidate>
+				<input id="searchbar" type="text" ng-model="search_value" placeholder="Search for projects...">
+				<div class="image_wrapper"><img src="images/search.png" alt=""></div>
+
+				<!-- <label><input type="radio" ng-model="user.preference" value="vi" />vi</label> -->
+   				<!-- <label><input type="radio" ng-model="user.preference" value="emacs" />emacs</label><br /> -->
+
+			</form>
+			<div id="profile">
+				<img src="me.jpg" alt="Alan Ma">
+				<div id="profile_wrapper" ng-click="open_profile()" ng-mouseover="mouse_enter()" ng-mouseleave="mouse_leave()" style="transform: rotate({{rotate_value}})"></div>
+				<div id="information" ng-show="profile_open">hello there</div>
+			</div>
+		</header>
 	</div>
 </body>
