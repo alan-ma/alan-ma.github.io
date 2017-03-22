@@ -86,8 +86,7 @@ header #search {
 	display: flex;
 	height: 2.2rem;
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
-	width: calc(50% - 150px);
-	min-width: 220px;
+	flex: 1;
 	padding: 5px;
 	justify-content: space-between;
 }
@@ -133,22 +132,19 @@ header #profile {
 	height: 6rem;
 	display: flex;
 	justify-content: flex-end;
-	width: calc(50% - 150px);
-	position: relative;
+	flex: 1;
 }
 header #profile #profile_wrapper {
 	border-radius: 50%;
 	box-shadow: inset 0 0 10px #222;
-	margin: -10px 0 0 -10px;
-	height: calc(100% + 20px);
-	width: calc(6rem + 20px);
-	position: absolute;
+	height: 100%;
+	width: 6rem;
 	border: 10px solid #555;
-	box-sizing: border-box;
 	border-right: 10px solid transparent;
 	border-left: 10px solid transparent;
 	transition: transform 300ms ease;
 	pointer-events: all;
+	margin-top: -10px;
 }
 header #profile #profile_wrapper:hover {
 	transform: rotate(30deg);
@@ -158,13 +154,16 @@ header #profile img {
 	display: block;
 	border-radius: 50%;
 	position: absolute;
+	top: 30px;
+	right: 30px;
+	height: 6rem;
 }
 header #profile #information {
 	position: absolute;
 	background: #e7e7e7;
 	clear: right;
-	top: calc(6rem + 20px);
-	right: -6rem;
+	top: 150px;
+	right: 30px;
 	height: 240px;
 	width: 400px;
 	padding: 30px;
@@ -238,8 +237,60 @@ header #tab_selection input[type=radio] {
 #main {
 	background: #f2f2f2;
 	height: 100%;
-	padding: 50px;
+	padding: 40px 20px;
 }
+#main .project {
+	background: #fff;
+	box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.08);
+	padding: 20px;
+	max-width: 1080px;
+	margin: auto;
+	position: relative;
+}
+#main .project h1 {
+	margin: 0;
+	font-size: 1.5rem;
+}
+#main .project h2 {
+	margin: 5px 0 0 0;
+	font-size: 1.2rem;
+}
+#main .project h3 {
+	margin: 5px 0 10px 0;
+	font-size: 1rem;
+}
+#main .project h3 span {
+	margin-right: 15px;
+}
+#main .project .separator {
+	width: 100%;
+	height: 1px;
+	background: #e5e5e5;
+}
+#main .project p {
+	margin: 10px 0 0 0;
+	line-height: 1.4;
+}
+#main .project .cover, .project .cover_image {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	font-family: 'Montserrat';
+	color: white;
+	font-size: 3rem;
+}
+#main .project .cover img {
+	object-fit: cover;
+}
+
+
+
+
+
+
+
 
 @media screen and (max-width: 720px) {
 	#loading .wrapper {
@@ -266,32 +317,6 @@ header #tab_selection input[type=radio] {
 	header .wrapper h1 {
 		font-size: 1.5rem;
 	}
-	header #profile {
-		height: 5rem;
-		width: calc(50% - 5rem - 10px -110px);
-	}
-	header #search {
-		min-width: 190px;
-	}
-	header #profile #profile_wrapper {
-		width: calc(5rem + 10px);
-		border: 5px solid #555;
-		margin: -5px 0 0 -5px;
-		height: calc(100% + 10px);
-		border-right: 5px solid transparent;
-		border-left: 5px solid transparent;
-	}
-	header #profile #information {
-		top: calc(5rem + 20px);
-		right: -5rem;
-		height: 200px;
-		width: 300px;
-		padding: 20px;
-	}
-	header #profile #information::before {
-		-webkit-clip-path: polygon(calc(100% - 2.5rem) 0, calc(100% - 3.3rem) 100%, calc(100% - 1.6rem) 100%, calc(100% - 2.5rem) 0);
-		clip-path: polygon(calc(100% - 2.5rem) 0, calc(100% - 3.3rem) 100%, calc(100% - 1.6rem) 100%, calc(100% - 2.5rem) 0);
-	}
 	header #tab_selection {
 		left: 0;
 		width: 100%;
@@ -299,6 +324,35 @@ header #tab_selection input[type=radio] {
 	}
 	header #tab_selection label {
 		width: 85px;
+	}
+	header #profile {
+		height: 5rem;
+	}
+	header #profile #profile_wrapper {
+		width: 5rem;
+		border: 7px solid #555;
+		border-right: 7px solid transparent;
+		border-left: 7px solid transparent;
+	}
+	header #profile img {
+		top: 27px;
+		right: 27px;
+		height: 5rem;
+	}
+	header #profile #information {
+		top: 130px;
+		right: 27px;
+		height: 200px;
+		width: 300px;
+		padding: 20px;
+	}
+	header #profile #information::before {
+		-webkit-clip-path: polygon(calc(100% - 2.5rem) 0, calc(100% - 3.5rem) 100%, calc(100% - 1.5rem) 100%, calc(100% - 2.5rem) 0);
+		clip-path: polygon(calc(100% - 2.5rem) 0, calc(100% - 3.5rem) 100%, calc(100% - 1.5rem) 100%, calc(100% - 2.5rem) 0);
+	}
+	header #tab_selection {
+		height: 25px;
+		top: 125px;
 	}
 }
 @media screen and (max-width: 480px) {
@@ -321,21 +375,29 @@ header #tab_selection input[type=radio] {
 	}
 	header #profile {
 		height: 3rem;
-		width: calc(50% - 3rem - 20px);
+		margin: 5px;
 	}
 	header #profile #profile_wrapper {
-		width: calc(3rem + 10px);
+		width: 3rem;
+		border: 5px solid #555;
+		border-right: 5px solid transparent;
+		border-left: 5px solid transparent;
+	}
+	header #profile img {
+		top: 20px;
+		right: 20px;
+		height: 3rem;
 	}
 	header #profile #information {
-		top: calc(3rem + 20px);
-		right: -3rem;
+		top: 90px;
+		right: 20px;
 		height: 150px;
 		width: 250px;
-		padding: 10px;
+		padding: 30px;
 	}
 	header #profile #information::before {
-		-webkit-clip-path: polygon(calc(100% - 1.5rem) 0, calc(100% - 2.2rem) 100%, calc(100% - 0.8rem) 100%, calc(100% - 1.5rem) 0);
-		clip-path: polygon(calc(100% - 1.5rem) 0, calc(100% - 2.2rem) 100%, calc(100% - 0.8rem) 100%, calc(100% - 1.5rem) 0);
+		-webkit-clip-path: polygon(calc(100% - 1.5rem) 0, calc(100% - 2.5rem) 100%, calc(100% - 0.5rem) 100%, calc(100% - 1.5rem) 0);
+		clip-path: polygon(calc(100% - 1.5rem) 0, calc(100% - 2.5rem) 100%, calc(100% - 0.5rem) 100%, calc(100% - 1.5rem) 0);
 	}
 	header #tab_selection {
 		top: 80px;
