@@ -288,3 +288,11 @@ header #tab_selection input[type=radio] {
 		width: 85px;
 	}
 }
+@media screen and (max-width: 480px) {
+	header .wrapper {
+		display: none;
+	}
+	header #profile {
+		width: 30%;
+	}
+}
