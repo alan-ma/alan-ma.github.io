@@ -15,7 +15,7 @@ h1, h2, h3, h4, h5, h6 {
 	position: absolute;
 	background: #f2f2f2;
 	width: 100%;
-	z-index: 10;
+	z-index: 100;
 }
 #loading .wrapper {
 	font-family: "Montserrat";
@@ -172,6 +172,7 @@ header #profile #information {
 	box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 0, 0, 0.08);
 	box-sizing: border-box;
 	opacity: 1;
+	z-index: 10;
 }
 header #profile #information::before {
 	content: "";
@@ -182,6 +183,8 @@ header #profile #information::before {
 	top: -20px;
 	left: 0;
 	-webkit-clip-path: polygon(calc(100% - 3rem) 0, calc(100% - 4rem) 100%, calc(100% - 2rem) 100%, calc(100% - 3rem) 0);
+	clip-path: polygon(calc(100% - 3rem) 0, calc(100% - 4rem) 100%, calc(100% - 2rem) 100%, calc(100% - 3rem) 0);
+	z-index: 10;
 }
 header #profile #information.ng-hide {
 	opacity: 0;
@@ -278,6 +281,7 @@ header #tab_selection input[type=radio] {
 	}
 	header #profile #information::before {
 		-webkit-clip-path: polygon(calc(100% - 2.5rem) 0, calc(100% - 3.3rem) 100%, calc(100% - 1.6rem) 100%, calc(100% - 2.5rem) 0);
+		clip-path: polygon(calc(100% - 2.5rem) 0, calc(100% - 3.3rem) 100%, calc(100% - 1.6rem) 100%, calc(100% - 2.5rem) 0);
 	}
 	header #tab_selection {
 		left: 0;
@@ -289,10 +293,53 @@ header #tab_selection input[type=radio] {
 	}
 }
 @media screen and (max-width: 480px) {
-	header .wrapper {
-		display: none;
+	#container header {
+		height: 110px;
+	}
+	header #search {
+		height: 2rem;
+		width: 50%;
+		min-width: 150px;
+	}
+	header #searchbar {
+		font-size: 0.8rem;
+		padding: 3px;
+	}
+	header .image_wrapper {
+		width: 2rem;
+		height: 2rem;
 	}
 	header #profile {
+		height: 3rem;
 		width: 30%;
+	}
+	header #profile #profile_wrapper {
+		width: calc(3rem + 10px);
+	}
+	header #profile #information {
+		top: calc(3rem + 20px);
+		right: -3rem;
+		height: 150px;
+		width: 250px;
+		padding: 10px;
+	}
+	header #profile #information::before {
+		-webkit-clip-path: polygon(calc(100% - 1.5rem) 0, calc(100% - 2.2rem) 100%, calc(100% - 0.8rem) 100%, calc(100% - 1.5rem) 0);
+		clip-path: polygon(calc(100% - 1.5rem) 0, calc(100% - 2.2rem) 100%, calc(100% - 0.8rem) 100%, calc(100% - 1.5rem) 0);
+	}
+	header #tab_selection {
+		top: 80px;
+		height: 30px;
+		font-size: 1.2rem;
+		left: 0;
+		width: 100%;
+		justify-content: center;
+	}
+	header #tab_selection label {
+		font-size: 0.9rem;
+		width: 75px;
+	}
+	header .wrapper {
+		display: none;
 	}
 }
