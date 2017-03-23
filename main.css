@@ -1,4 +1,4 @@
-body {
+body, html {
 	margin: 0;
 	font-family: 'Open Sans';
 }
@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
 }
 #loading .wrapper h1::before {
-	content: "'";
+	content: "";
 	color: transparent;
 }
 #loading .wrapper h1 span.hidden {
@@ -104,7 +104,7 @@ header .image_wrapper:hover {
 	cursor: pointer;
 }
 header #searchbar {
-	border: none;	
+	border: none;
 	font-size: 1.1rem;
 	box-sizing: border-box;
 	padding: 5px;
@@ -246,6 +246,8 @@ header #tab_selection input[type=radio] {
 	max-width: 1080px;
 	margin: auto;
 	position: relative;
+	border-radius: 2px;
+	margin-bottom: 35px;
 }
 #main .project h1 {
 	margin: 0;
@@ -271,7 +273,7 @@ header #tab_selection input[type=radio] {
 	margin: 10px 0 0 0;
 	line-height: 1.4;
 }
-#main .project .cover, .project .cover_image {
+#main .project .cover {
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -280,9 +282,43 @@ header #tab_selection input[type=radio] {
 	font-family: 'Montserrat';
 	color: white;
 	font-size: 3rem;
+	border-radius: 2px;
+	
 }
-#main .project .cover img {
+#main .project .cover span {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: transform 0.3s ease;
+}
+.project .cover_image {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	border-radius: 2px;
+	transition: opacity 0.4s linear;
+}
+#main .project .cover_image img {
+	width: 100%;
+	height: 100%;
 	object-fit: cover;
+	filter: blur(5px)
+}
+#main .project:hover .cover span {
+	transform: scaleX(0);
+}
+#main .project:hover .cover_image {
+	opacity: 0;
+}
+#main .project:hover {
+	box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 0, 0, 0.08);
+	cursor: pointer;
 }
 
 

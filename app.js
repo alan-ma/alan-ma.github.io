@@ -89,11 +89,25 @@
 
 		$scope.projects = [
 			{
-				"name": "Hello World!",
-				"organization": "Noobs Inc.",
+				"name": "project title work 1",
+				"organization": "organization",
 				"tags": ["A", "B", "C"],
-				"tab": "work",
-				"description": "This is a cool project! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan vestibulum ullamcorper. Aliquam dolor eros, pellentesque vitae odio sed, lacinia semper purus. Sed fermentum, purus at convallis molestie, dui arcu dictum odio, in rutrum lorem urna sed augue. Morbi sollicitudin blandit odio non malesuada. Morbi id quam sed nisi malesuada pulvinar."
+				"tab": 1,
+				"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan vestibulum ullamcorper. Aliquam dolor eros, pellentesque vitae odio sed, lacinia semper purus. Sed fermentum, purus at convallis molestie, dui arcu dictum odio, in rutrum lorem urna sed augue. Morbi sollicitudin blandit odio non malesuada. Morbi id quam sed nisi malesuada pulvinar."
+			},
+			{
+				"name": "project title work 2",
+				"organization": "organization",
+				"tags": ["A", "B", "C"],
+				"tab": 1,
+				"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan vestibulum ullamcorper. Aliquam dolor eros, pellentesque vitae odio sed, lacinia semper purus. Sed fermentum, purus at convallis molestie, dui arcu dictum odio, in rutrum lorem urna sed augue. Morbi sollicitudin blandit odio non malesuada. Morbi id quam sed nisi malesuada pulvinar."
+			},
+			{
+				"name": "project title funsies",
+				"organization": "organization",
+				"tags": ["A", "B", "C"],
+				"tab": 2,
+				"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan vestibulum ullamcorper. Aliquam dolor eros, pellentesque vitae odio sed, lacinia semper purus. Sed fermentum, purus at convallis molestie, dui arcu dictum odio, in rutrum lorem urna sed augue. Morbi sollicitudin blandit odio non malesuada. Morbi id quam sed nisi malesuada pulvinar."
 			}
 		];
 

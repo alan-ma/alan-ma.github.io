@@ -35,15 +35,15 @@
 				<label ng-repeat="tab in tabs track by $index" ng-class="{selected: $index==search.tab}"><input type="radio" ng-value="tab.value" ng-model="$parent.search.tab">{{tab.name}}</label>
 			</form>
 		</header>
-		<!-- <div id="main">
-			<div class="project" ng-repeat="project in projects track by $index">
-				<div class="cover">{{project.name}}<div class="cover_image"><img src="images/template.jpg" alt="project cover"></div></div>
+		<div id="main">
+			<div class="project" ng-repeat="project in projects | filter:search.query:false track by $index">
+				<div class="cover"><div class="cover_image"><img src="images/template.jpg" alt="project cover"></div><span>{{project.name}}</span></div>
 				<h1>{{project.name}}</h1>
 				<h2>{{project.organization}}</h2>
 				<h3><span ng-repeat="tag in project.tags track by $index">{{tag}}</span></h3>
 				<div class="separator"></div>
 				<p>{{project.description}}</p>
 			</div>
-		</div> -->
+		</div>
 	</div>
 </body>
