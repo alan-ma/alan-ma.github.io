@@ -19,31 +19,31 @@
 		</div>
 	</div>
 	<div id="container" ng-controller="PortfolioController" ng-click="check_profile()">
-		<!-- <iframe id="resume" src="https://docs.google.com/gview?url=https://alan-ma.github.io/Alan%20Ma%20Resume.pdf&embedded=true" frameborder="0"></iframe> -->
 		<header>
 			<div class="wrapper"><h1>Alan Ma</h1></div>
 			<form id="search" novalidate>
-				<input id="searchbar" type="text" ng-model="search.query" placeholder="Search projects...">
+				<input id="searchbar" type="text" ng-model="search.query" placeholder="Feature W.I.P.">
 				<div class="image_wrapper"><img src="images/search.png" alt=""></div>
 			</form>
 			<div id="profile">
 				<img src="images/me.jpg" alt="Alan Ma">
 				<div id="profile_wrapper" ng-click="toggle_profile()" ng-mouseover="mouse_enter()" ng-mouseleave="mouse_leave()" style="transform: rotate({{rotate_value}})"></div>
-				<div id="information" ng-show="profile_open">hello there</div>
+				<div id="information" ng-show="profile_open">I'm a high school student who loves code. <br> <a href="https://github.com/alan-ma" target="_blank">Github</a> <br> <a href="https://www.linkedin.com/in/alan-ma" target="_blank">LinkedIn</a></div>
 			</div>
 			<form id="tab_selection">
-				<label ng-repeat="tab in tabs track by $index" ng-class="{selected: $index==search.tab}"><input type="radio" ng-value="tab.value" ng-model="$parent.search.tab">{{tab.name}}</label>
+				<label ng-repeat="tab in [1] track by $index" ng-class="{selected: $index==search.tab}"><input type="radio" ng-value="tab.value" ng-model="$parent.search.tab"><!-- {{tab.name}} -->Resume</label>
 			</form>
 		</header>
-		<div id="main">
-			<div class="project" ng-repeat="project in projects | filter:search.query:false track by $index">
+		<div ng-class="{no_click: profile_open}" id="main">
+			<!-- <div class="project" ng-repeat="project in projects | filter:search.query:false track by $index">
 				<div class="cover"><div class="cover_image"><img src="images/template.jpg" alt="project cover"></div><span>{{project.name}}</span></div>
 				<h1>{{project.name}}</h1>
 				<h2>{{project.organization}}</h2>
 				<h3><span ng-repeat="tag in project.tags track by $index">{{tag}}</span></h3>
 				<div class="separator"></div>
 				<p>{{project.description}}</p>
-			</div>
+			</div> -->
+			<iframe id="resume" src="https://docs.google.com/gview?url=https://alan-ma.github.io/Alan%20Ma%20Resume.pdf&embedded=true" frameborder="0"></iframe>
 		</div>
 	</div>
 </body>
