@@ -26,9 +26,18 @@
 				<div class="image_wrapper"><img src="images/search.png" alt=""></div>
 			</form>
 			<div id="profile">
-				<img src="images/me.jpg" alt="Alan Ma">
+				<img class="profile_pic" src="images/me.jpg" alt="Alan Ma">
 				<div id="profile_wrapper" ng-click="toggle_profile()" ng-mouseover="mouse_enter()" ng-mouseleave="mouse_leave()" style="transform: rotate({{rotate_value}})"></div>
-				<div id="information" ng-show="profile_open">I'm a high school student who loves code. <br> <a href="https://github.com/alan-ma" target="_blank">Github</a> <br> <a href="https://www.linkedin.com/in/alan-ma" target="_blank">LinkedIn</a></div>
+				<div id="information" ng-show="profile_open">
+					I'm a high school student who loves code.
+					<br>
+					<a href="https://github.com/alan-ma" target="_blank">
+						<img class="icon" src="images/github.png">
+					</a>
+					<a href="https://www.linkedin.com/in/alan-ma" target="_blank">
+						<img class="icon" src="images/linkedin.jpg">
+					</a>
+				</div>
 			</div>
 			<form id="tab_selection">
 				<label ng-repeat="tab in [1] track by $index" ng-class="{selected: $index==search.tab}"><input type="radio" ng-value="tab.value" ng-model="$parent.search.tab"><!-- {{tab.name}} -->Resume</label>
