@@ -40,6 +40,7 @@ h1, h2, h3, h4, h5, h6 {
 	animation: blink 1000ms step-start infinite;
 	border-right: 4px solid #000;
 	font-weight: normal;
+	display: flex;
 }
 #loading .wrapper h1::before {
 	content: "";
