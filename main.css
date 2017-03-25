@@ -68,6 +68,15 @@ h1, h2, h3, h4, h5, h6 {
 	top: 150px;
 	left: 0;
 }
+#resume_loading {
+	margin: auto;
+	height: 30px;
+	width: 30px;
+	border: 7px solid transparent;
+	border-top: 7px solid #555;
+	border-radius: 50%;
+	animation: spin 0.7s linear infinite;
+}
 .no_click {
 	pointer-events: none;
 }
@@ -75,6 +84,10 @@ h1, h2, h3, h4, h5, h6 {
 	0% {border-right: 4px solid #000;}
 	50% {border-right: 4px solid transparent;}
 	100% {border-right: 4px solid #000;}
+}
+@keyframes spin {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(360deg);}
 }
 #container {
 	height: 100%;
@@ -263,6 +276,8 @@ header #tab_selection input[type=radio] {
 #main {
 	background: #f2f2f2;
 	padding: 40px 20px;
+	height: calc(100% - 150px);
+	box-sizing: border-box;
 }
 #main .project {
 	background: #fff;
@@ -400,6 +415,11 @@ header #tab_selection input[type=radio] {
 		right: 27px;
 		height: 5rem;
 	}
+	header #profile .profile_pic {
+		top: 27px;
+		right: 27px;
+		height: 5rem;
+	}
 	header #profile #information {
 		top: 130px;
 		right: 27px;
@@ -453,6 +473,11 @@ header #tab_selection input[type=radio] {
 		right: 20px;
 		height: 3rem;
 	}
+	header #profile .profile_pic {
+		top: 20px;
+		right: 20px;
+		height: 3rem;
+	}
 	header #profile #information {
 		top: 90px;
 		right: 20px;
@@ -478,5 +503,8 @@ header #tab_selection input[type=radio] {
 	}
 	header .wrapper {
 		display: none;
+	}
+	#main {
+		height: calc(100% - 110px);
 	}
 }
