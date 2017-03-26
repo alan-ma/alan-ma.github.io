@@ -121,9 +121,13 @@ header .image_wrapper {
 	width: 2.2rem;
 	height: 2.2rem;
 	box-sizing: border-box;
+	transition: transform 0.1s ease;
 }
 header .image_wrapper:hover {
 	cursor: pointer;
+}
+header .image_wrapper:active {
+	transform: scale(0.9);
 }
 header #searchbar {
 	border: none;
@@ -167,6 +171,7 @@ header #profile #profile_wrapper {
 	transition: transform 300ms ease;
 	pointer-events: all;
 	margin-top: -10px;
+	z-index: 5;
 }
 header #profile #profile_wrapper:hover {
 	transform: rotate(30deg);
@@ -193,9 +198,11 @@ header #profile #information {
 	box-sizing: border-box;
 	opacity: 1;
 	z-index: 10;
-	display: flex;
+	display: none;
 	flex-wrap: wrap;
 	align-content: flex-start;
+	transition: all 0.3s ease;
+	opacity: 0;
 }
 header #profile #information::before {
 	content: "";
@@ -208,13 +215,6 @@ header #profile #information::before {
 	-webkit-clip-path: polygon(calc(100% - 3rem) 0, calc(100% - 4rem) 100%, calc(100% - 2rem) 100%, calc(100% - 3rem) 0);
 	clip-path: polygon(calc(100% - 3rem) 0, calc(100% - 4rem) 100%, calc(100% - 2rem) 100%, calc(100% - 3rem) 0);
 	z-index: 10;
-}
-header #profile #information.ng-hide {
-	opacity: 0;
-	height: 0;
-}
-header #profile #information.ng-hide-add, #information.ng-hide-remove {
-	transition: all 0.3s ease;
 }
 header #profile #information a {
 	margin-top: 15px;
