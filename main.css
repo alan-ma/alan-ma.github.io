@@ -224,7 +224,6 @@ header #profile #information .icon {
 	height: 32px;
 	width: 32px;
 	border-radius: 0;
-	position: relative;
 	display: block;
 	transition: transform 0.1s ease;
 }
@@ -426,7 +425,8 @@ header #tab_selection input[type=radio] {
 		right: 27px;
 		height: 200px;
 		width: 300px;
-		padding: 20px;
+		padding: 15px;
+		font-size: 0.9rem;
 	}
 	header #profile #information::before {
 		-webkit-clip-path: polygon(calc(100% - 2.5rem) 0, calc(100% - 3.5rem) 100%, calc(100% - 1.5rem) 100%, calc(100% - 2.5rem) 0);
@@ -482,13 +482,21 @@ header #tab_selection input[type=radio] {
 	header #profile #information {
 		top: 90px;
 		right: 20px;
-		height: 150px;
+		height: 170px;
 		width: 250px;
-		padding: 30px;
+		padding: 10px;
+		font-size: 0.8rem;
 	}
 	header #profile #information::before {
 		-webkit-clip-path: polygon(calc(100% - 1.5rem) 0, calc(100% - 2.5rem) 100%, calc(100% - 0.5rem) 100%, calc(100% - 1.5rem) 0);
 		clip-path: polygon(calc(100% - 1.5rem) 0, calc(100% - 2.5rem) 100%, calc(100% - 0.5rem) 100%, calc(100% - 1.5rem) 0);
+	}
+	header #profile #information a {
+		margin-top: 10px;
+	}
+	header #profile #information .icon {
+		height: 24px;
+		width: 24px;
 	}
 	header #tab_selection {
 		top: 80px;
