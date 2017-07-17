@@ -335,7 +335,7 @@ header #tab_selection input[type=radio] {
 	cursor: pointer;
 }
 #introduction button:hover {
-	transform: scale(1.05);
+	transform: scale(1.05) translateX(15px);
 }
 #introduction #languages img {
 	height: 75px;
