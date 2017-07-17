@@ -32,7 +32,7 @@
 				<br>
 				I'm a high school student who loves code.
 				<br>
-				My portfolio is currently under development! In the meantime, check out my GitHub and LinkedIn:
+				My portfolio is currently under development! Be sure to check out my GitHub and LinkedIn:
 				<br>
 				<a href="https://github.com/alan-ma" target="_blank">
 					<img class="icon" src="images/github.png">
@@ -43,23 +43,46 @@
 			</div>
 		</div>
 		<form id="tab_selection">
-			<label class="selected"><input type="radio">Resume</label>
+			<label data-title="projects" data-order="1" class="selected"><input type="radio">Hello!</label>
+			<!-- <label data-title="fun" data-order="3"><input type="radio">Fun</label> -->
+			<label data-title="resume" data-order="3" id="resume_label"><input type="radio">Resume</label>
 		</form>
 	</header>
 	<div id="main">
-		<!--
-			Old AngularJS Things:
-			<div class="project" ng-repeat="project in projects | filter:search.query:false track by $index">
-				<div class="cover"><div class="cover_image"><img src="images/template.jpg" alt="project cover"></div><span>{{project.name}}</span></div>
-				<h1>{{project.name}}</h1>
-				<h2>{{project.organization}}</h2>
-				<h3><span ng-repeat="tag in project.tags track by $index">{{tag}}</span></h3>
-				<div class="separator"></div>
-				<p>{{project.description}}</p>
-			</div> 
-		-->
-		<div id="resume_loading"></div>
-		<iframe id="resume" src="https://docs.google.com/gview?url=https://alan-ma.github.io/Alan%20Ma%20Resume.pdf&embedded=true" frameborder="0"></iframe>
+		<div class="content" id="projects">
+			<canvas id="canvas_background" width="1080px" height="720px"></canvas>
+			<div class="inside_content">
+				<div id="introduction">
+					<h1>Hi! I'm Alan.</h1>
+					<h2>I'm a frontend developer excited about expanding into fullstack dev. I'm also beginning my journey in data structures and algorithms. I have a love for technology!</h2>
+					<div id="languages" class="center">
+						<img src="images/html_logo.png" alt="html5">
+						<img src="images/css_logo.png" alt="css3">
+						<img src="images/javascript_logo.png" alt="javascript">
+						<img src="images/jquery_logo.gif" alt="jquery">
+						<img src="images/bootstrap_logo.png" alt="bootstrap">
+						<img src="images/angular_logo.png" alt="angular4">
+						<img src="images/python_logo.png" alt="python">
+					</div>
+					<h2>My site is currently under construction – check out my <div id="github_link"><a href="https://github.com/alan-ma" target="_blank"><img class="icon" src="images/github.png"> Github</a></div> for all of my projects!</h2>
+					<br>
+					<div class="center"><button><h2>→ Check out my resume →</h2></button></div>
+				</div>
+			</div>
+		</div>
+<!-- 		<div class="content">
+		</div>
+		<div class="content" id="fun">
+			<div class="inside_content">
+			</div>
+		</div> -->
+		<div class="content" id="resume_padding">
+			<!-- literal padding for my resume :) -->
+		</div>
+		<div class="content" id="resume">
+			<div id="resume_loading"></div>
+			<iframe id="resume_frame" src="https://docs.google.com/gview?url=https://alan-ma.github.io/Alan%20Ma%20Resume.pdf&embedded=true" frameborder="0"></iframe>
+		</div>
 	</div>
 </div>
 

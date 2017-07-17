@@ -70,22 +70,6 @@ h1, h2, h3, h4, h5, h6 {
 #loading .image_wrapper:hover {
 	cursor: pointer;
 }
-#resume {
-	width: 100%;
-	height: calc(100% - 150px);
-	position: absolute;
-	top: 150px;
-	left: 0;
-}
-#resume_loading {
-	margin: auto;
-	height: 30px;
-	width: 30px;
-	border: 7px solid transparent;
-	border-top: 7px solid #555;
-	border-radius: 50%;
-	animation: spin 0.7s linear infinite;
-}
 .no_click {
 	pointer-events: none;
 }
@@ -100,6 +84,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #container {
 	height: 100%;
+	overflow: hidden;
 }
 #container header {
 	height: 150px;
@@ -110,6 +95,7 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 30px 20px 0 20px;
 	position: relative;
 	z-index: 8;
+	background: #fafafa;
 }
 header #search {
 	display: flex;
@@ -170,7 +156,7 @@ header #profile {
 }
 header #profile #profile_wrapper {
 	border-radius: 50%;
-	box-shadow: inset 0 0 10px #222;
+	box-shadow: inset 0 0 4px #222;
 	height: 100%;
 	width: 6rem;
 	border: 10px solid #555;
@@ -192,6 +178,8 @@ header #profile .profile_pic {
 	top: 30px;
 	right: 30px;
 	height: 6rem;
+	filter: saturate(1.3);
+	filter: brightness(1.15);
 }
 header #profile #information {
 	position: absolute;
@@ -209,7 +197,7 @@ header #profile #information {
 	display: none;
 	flex-wrap: wrap;
 	align-content: flex-start;
-	transition: all 0.3s ease;
+	transition: 0.3s;
 	opacity: 0;
 }
 header #profile #information::before {
@@ -280,99 +268,106 @@ header #tab_selection input[type=radio] {
 	padding: 0;
 	opacity: 0;
 }
-
 #main {
-	background: #f2f2f2;
-	padding: 40px 20px;
+	background: #fff;
+	padding: 0;
 	height: calc(100% - 150px);
 	box-sizing: border-box;
+	width: 300%;
+	display: flex;
 }
-#main .project {
-	background: #fff;
-	box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.08);
-	padding: 20px;
-	max-width: 1080px;
-	margin: auto;
-	position: relative;
-	border-radius: 2px;
-	margin-bottom: 35px;
-}
-#main .project h1 {
-	margin: 0;
-	font-size: 1.5rem;
-}
-#main .project h2 {
-	margin: 5px 0 0 0;
-	font-size: 1.2rem;
-}
-#main .project h3 {
-	margin: 5px 0 10px 0;
-	font-size: 1rem;
-}
-#main .project h3 span {
-	margin-right: 15px;
-}
-#main .project .separator {
-	width: 100%;
-	height: 1px;
-	background: #e5e5e5;
-}
-#main .project p {
-	margin: 10px 0 0 0;
-	line-height: 1.4;
-}
-#main .project .cover {
-	position: absolute;
+#main .content {
 	height: 100%;
 	width: 100%;
+	transition: 0.8s;
+	padding: 10px;
+	box-sizing: border-box;
+	position: relative;
+	display: inline-block;
+	overflow-y: scroll;
+}
+#projects #canvas_background {
+	height: 100%;
+	width: 100%;
+	position: absolute;
 	top: 0;
 	left: 0;
-	font-family: 'Montserrat';
-	color: white;
-	font-size: 3rem;
-	border-radius: 2px;
-	
+	z-index: 0;
 }
-#main .project .cover span {
-	position: absolute;
+#projects .inside_content {
 	height: 100%;
-	width: 100%;
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	transition: transform 0.3s ease;
 }
-.project .cover_image {
-	position: absolute;
-	height: 100%;
+#projects #introduction {
+	position: relative;
+	z-index: 10;
+	margin: auto;
+	max-width: 720px;
+	padding: 10px 20px;
+	text-align: justify;
+}
+#introduction #github_link {
+	display: inline-block;
+	white-space: nowrap;
+}
+#introduction #github_link a {
+	text-decoration: none;
+}
+#introduction #github_link img {
+	display: inline-block;
+	height: 20px;
+}
+#introduction #github_link a:hover {
+	background: rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+}
+#introduction .center {
 	width: 100%;
-	top: 0;
-	left: 0;
-	overflow: hidden;
-	border-radius: 2px;
-	transition: opacity 0.4s linear;
+	text-align: center;
 }
-#main .project .cover_image img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	filter: blur(5px)
-}
-#main .project:hover .cover span {
-	transform: scaleX(0);
-}
-#main .project:hover .cover_image {
-	opacity: 0;
-}
-#main .project:hover {
-	box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 0, 0, 0.08);
+#introduction button {
+	border: none;
+	background: rgba(184, 255, 191, 0.6);
+	padding: 10px;
+	border-radius: 3px;
+	transition: 0.5s;
 	cursor: pointer;
 }
-
-
-
-
-
+#introduction button:hover {
+	transform: scale(1.05);
+}
+#introduction #languages img {
+	height: 75px;
+	width: auto;
+	margin: 5px;
+	transition: 0.3s;
+}
+#introduction #languages img:hover {
+	transform: rotate(10deg);
+}
+#resume_padding {
+	background: linear-gradient(to right, #fff, #fff, #d1d1d1);
+}
+#resume_frame {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#resume_loading {
+	margin: auto;
+	height: 30px;
+	width: 30px;
+	border: 7px solid transparent;
+	border-top: 7px solid #555;
+	border-radius: 50%;
+	animation: spin 0.7s linear infinite;
+}
+::-webkit-scrollbar { 
+    display: none; 
+}
 
 
 
@@ -450,10 +445,6 @@ header #tab_selection input[type=radio] {
 		height: 110px;
 		padding: 20px 10px 0 10px;
 	}
-	#resume {
-		height: calc(100% - 110px);
-		top: 110px;
-	}
 	header #search {
 		height: 2rem;
 		width: 50%;
@@ -521,7 +512,7 @@ header #tab_selection input[type=radio] {
 	header .wrapper {
 		display: none;
 	}
-	#main {
-		height: calc(100% - 110px);
+	#resume_frame {
+		height: calc(100% + 20px);
 	}
 }
