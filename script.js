@@ -114,7 +114,7 @@ function init_header() {
 		$('#resume_label').addClass('selected');
 		current_tab = $('#resume_label').attr('data-order');
 		swap(Number($('#resume_label').attr('data-order'))-1);
-	})
+	});
 }
 
 function search() {
