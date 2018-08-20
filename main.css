@@ -328,7 +328,7 @@ header #tab_selection input[type=radio] {
 }
 #introduction button {
 	border: none;
-	background: rgba(184, 255, 191, 0.6);
+	background: rgba(255, 152, 0, 0.8);
 	padding: 10px;
 	border-radius: 3px;
 	transition: 0.5s;

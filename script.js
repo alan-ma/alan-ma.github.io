@@ -104,6 +104,16 @@ function init_header() {
 		}
 	});
 	function swap(amount) {
+		tab_content = '';
+			switch(current_tab) {
+				case '1':
+					tab_content = 'Introduction';
+					break;
+				case '3':
+					tab_content = 'Resume';
+					break;
+			}
+			$('#searchbar').attr('placeholder', tab_content);
 		translate_amount += -100 * amount;
 		old_tab = current_tab;
 		$('#main .content').css('transform', 'translateX(' + translate_amount + '%)');
