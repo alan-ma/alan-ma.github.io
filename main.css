@@ -2,14 +2,16 @@ body {
 	margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Montserrat';
+h1 {
+	font-family: 'Montserrat', serif;
 	font-weight: normal;
 	margin: 0;
+	font-size: 2em;
 }
 
 p, a {
-	font-family: 'Open Sans';
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 1.2em;
 }
 
 .container {
@@ -20,11 +22,13 @@ p, a {
 	justify-content: center;
 	flex-direction: column;
 	background: #fafafa;
+	padding: 10px;
+	box-sizing: border-box;
 }
 
 .image img {
-	width: 150px;
-	height: 150px;
+	width: 10em;
+	height: 10em;
 	border-radius: 50%;
 	margin: 20px;
 }
