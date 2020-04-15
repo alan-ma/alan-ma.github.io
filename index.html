@@ -1,128 +1,16 @@
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width"/>
 <meta name="description" content="Alan Ma's Portfolio">
 <meta name="author" content="Alan Ma">
 <title>Alan Ma</title>
 
 <link rel="stylesheet" href="main.css">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans&display=swap" rel="stylesheet">
 
-<div id="loading">
-	<div class="wrapper">
-		<h1>
-			<span id="loading_name"></span>
-		</h1>
-		<div id="loading_button" class="image_wrapper"><img src="images/search.png" alt=""></div>
+<div class="container">
+	<div class="image">
+		<img src="images/me.png" alt="Alan Ma">
 	</div>
+	<h1>Alan Ma</h1>
+	<p>Hey! My name is Alan and I'm studying Software Engineering at the University of Waterloo.</p>
+	<a href="Alan_Ma_Resume.pdf">My resume</a>
 </div>
-
-<div id="container">
-	<header>
-		<div class="wrapper"><h1>Alan Ma</h1></div>
-		<form id="search">
-			<input id="searchbar" type="text" placeholder="Introduction">
-			<div class="image_wrapper"><img src="images/search.png" alt=""></div>
-		</form>
-		<div id="profile">
-			<img class="profile_pic" src="images/me.jpg" alt="Alan Ma">
-			<div id="profile_wrapper"></div>
-			<div id="information">
-				Hey there!
-				<br>
-				I'm currently studying Software Engineering at the University of Waterloo!
-				<br>
-				Be sure to check out my GitHub, LinkedIn, and Devpost:
-				<br>
-				<a href="https://github.com/alan-ma" target="_blank">
-					<img class="icon" src="images/github.png">
-				</a>
-				<a href="https://www.linkedin.com/in/alan-ma" target="_blank">
-					<img class="icon" src="images/linkedin.png">
-				</a>
-				<a href="https://devpost.com/alan-ma" target="_blank">
-					<img class="icon" src="images/devpost_logo.png">
-				</a>
-			</div>
-		</div>
-		<form id="tab_selection">
-			<label data-title="projects" data-order="1" class="selected"><input type="radio">Hello!</label>
-			<label data-title="resume" data-order="3" id="resume_label"><input type="radio">Resume</label>
-		</form>
-	</header>
-	<div id="main">
-		<div class="content" id="projects">
-			<canvas id="canvas_background" width="1080px" height="720px"></canvas>
-			<div class="inside_content">
-				<div id="introduction">
-					<h1>Hi! I'm Alan.</h1>
-					<h2>
-						I'm a Software Engineering student at the University of Waterloo.
-						<br><br>
-						I have experience in front-end development and DevOps. I'm excited about machine learning and its applications in various industries.
-						<br><br>
-						I have a love for technology!
-					</h2>
-					<div id="languages" class="center">
-						<img src="images/html_logo.png" alt="html5">
-						<img src="images/css_logo.png" alt="css3">
-						<img src="images/javascript_logo.png" alt="javascript">
-						<img src="images/nodejs_logo.png" alt="nodejs">
-						<img src="images/cpp_logo.png" alt="cpp">
-						<img src="images/angular_logo.png" alt="angular4">
-						<img src="images/python_logo.png" alt="python">
-					</div>
-					<h2>
-						I've made some pretty cool things at hackathons! (here's my 
-						<div id="github_link">
-							<a href="https://devpost.com/alan-ma" target="_blank">
-								<img class="icon" src="images/devpost_logo.png"> Devpost
-							</a>
-						</div>
-						 )
-					</h2>
-					<h2>
-						Check out my 
-						<div id="github_link">
-							<a href="https://github.com/alan-ma" target="_blank">
-								<img class="icon" src="images/github.png"> Github
-							</a>
-						</div>
-						 for all of my projects.
-					</h2>
-					<h2>
-						My work experience can be found in my 
-						<div id="github_link"><a href="https://www.linkedin.com/in/alan-ma" target="_blank">
-							<img class="icon" src="images/linkedin.png"> LinkedIn
-						</a>
-					</div>
-					 profile.
-					</h2>
-					<br>
-					<div class="center"><button><h2>→ Check out my resume →</h2></button></div>
-				</div>
-			</div>
-		</div>
-		<div class="content" id="resume_padding">
-			<!-- literal padding for my resume :) -->
-		</div>
-		<div class="content" id="resume">
-			<div id="resume_loading"></div>
-			<iframe id="resume_frame" src="https://docs.google.com/gview?url=https://alan-ma.github.io/Alan-Ma-Resume.pdf&embedded=true" frameborder="0"></iframe>
-		</div>
-	</div>
-</div>
-
-<!-- Google Analytics -->
-<script>
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  
-	ga('create', 'UA-103591197-1', 'auto');
-	ga('send', 'pageview');
-  
-</script>
-<!--/Google Analytics  -->
-
-<script src="jquery-3.2.0.min.js"></script>
-<script src="script.js"></script>
