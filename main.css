@@ -33,17 +33,3 @@ img {
 	border-radius: 50%;
 	margin: 20px;
 }
-
-@media only screen and (max-width: 768px) {
-	h1 {
-		font-size: 3em;
-	}
-
-	p, a {
-		font-size: 1.5em;
-	}
-
-	img {
-		width: 15em;
-	}
-}
